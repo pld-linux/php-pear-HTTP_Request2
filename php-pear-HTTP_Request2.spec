@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{_pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
+Version:	0.5.2
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	597c8414127c152b6202a09702bf29fc
+# Source0-md5:	b6e29cd9b495486e7cf783a7d299f5bb
 URL:		http://pear.php.net/package/HTTP_Request2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PHP5 rewrite of HTTP_Request package. Provides cleaner API and
-pluggable adapters. 
+pluggable adapters.
 
 Currently available are:
  - Socket adapter, based on old HTTP_Request code,
@@ -42,11 +42,9 @@ Port klasy HTTP_Request do PHP5. Udostępnia czystsze API oraz
 dołączalne adaptery.
 
 Obecnie dostępne są:
- - adapter oparty na gniazdach, na podstawie starego kodu
-   HTTP_Request,
- - adapter Curl, 
- - adapter Mock, do testowania pakietów korzystających z
-   HTTP_Request2.
+ - adapter oparty na gniazdach, na podstawie starego kodu HTTP_Request,
+ - adapter Curl,
+ - adapter Mock, do testowania pakietów korzystających z HTTP_Request2.
 
 Klasa ta wspiera żądania POST z dołączonymi danymi oraz plikami,
 autentykację, ciastka (cookies), serwery proxy, kompresję gzip oraz
@@ -59,8 +57,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
