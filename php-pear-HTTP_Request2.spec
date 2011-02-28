@@ -1,17 +1,17 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		HTTP
-%define		_subclass	Request2
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	HTTP_Request2
+%define		subver	beta1
+%define		rel		1
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{_pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{_pearname}
-Version:	0.6.0
-Release:	1
+Version:	2.0.0
+Release:	0.%{subver}.%{rel}
 License:	BSD License
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	a750600a3195f90979c8a0d0266b60c9
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
+# Source0-md5:	b19c4b717ced84da3933faf528c4e5da
 URL:		http://pear.php.net/package/HTTP_Request2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -60,6 +60,8 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
+rm .%{php_pear_dir}/data/HTTP_Request2/generate-list.php
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
@@ -74,3 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/HTTP/Request2
 %{php_pear_dir}/HTTP/Request2.php
+
+%{php_pear_dir}/data/%{_pearname}
