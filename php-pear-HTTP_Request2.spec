@@ -1,7 +1,7 @@
 %define		_status		beta
 %define		_pearname	HTTP_Request2
 %define		subver	beta1
-%define		rel		1
+%define		rel		2
 %include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{_pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
