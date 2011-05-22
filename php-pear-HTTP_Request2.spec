@@ -1,21 +1,21 @@
-%define		_status		beta
-%define		_pearname	HTTP_Request2
-%define		subver	beta3
+%define		status		beta
+%define		pearname	HTTP_Request2
+%define		subver	RC1
 %define		rel		1
 %include	/usr/lib/rpm/macros.php
-Summary:	%{_pearname} - Provides an easy way to perform HTTP requests
-Summary(pl.UTF-8):	%{_pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - Provides an easy way to perform HTTP requests
+Summary(pl.UTF-8):	%{pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
+Name:		php-pear-%{pearname}
 Version:	2.0.0
 Release:	0.%{subver}.%{rel}
 License:	BSD License
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
-# Source0-md5:	3242bfbb98b3ccdd05f6735ad1202e7d
+Source0:	http://pear.php.net/get/%{pearname}-%{version}%{subver}.tgz
+# Source0-md5:	f1633221537fa3d69adbc4c1ef1f3000
 URL:		http://pear.php.net/package/HTTP_Request2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-Net_URL2 >= 0.3.0
 Suggests:	php-curl
@@ -40,7 +40,7 @@ Supports POST requests with data and file uploads, authentication,
 cookies, proxies, gzip and deflate encodings, monitoring the request
 progress with Observers.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Port klasy HTTP_Request do PHP5. Udostępnia czystsze API oraz
@@ -55,7 +55,7 @@ Klasa ta wspiera żądania POST z dołączonymi danymi oraz plikami,
 autentykację, ciastka (cookies), serwery proxy, kompresję gzip oraz
 deflate encoding, oraz monitorowanie żądań za pomocą obserwatorów.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
@@ -77,4 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/HTTP/Request2
 %{php_pear_dir}/HTTP/Request2.php
 
-%{php_pear_dir}/data/%{_pearname}
+%{php_pear_dir}/data/%{pearname}
