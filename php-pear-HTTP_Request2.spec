@@ -1,13 +1,13 @@
 %define		status		beta
 %define		pearname	HTTP_Request2
 %define		subver	RC1
-%define		rel		2
+%define		rel		3
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{pearname}
 Version:	2.0.0
-Release:	0.%{subver}.%{rel}
+Release:	1.%{subver}.%{rel}
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}%{subver}.tgz
