@@ -1,23 +1,21 @@
-%define		status		beta
+%define		status		stable
 %define		pearname	HTTP_Request2
-%define		subver	RC1
-%define		rel		3
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{pearname}
 Version:	2.0.0
-Release:	1.%{subver}.%{rel}
+Release:	2
 License:	BSD License
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{pearname}-%{version}%{subver}.tgz
-# Source0-md5:	f1633221537fa3d69adbc4c1ef1f3000
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	e8598d228909213cb829fe617247b199
 URL:		http://pear.php.net/package/HTTP_Request2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
-Requires:	php-pear-Net_URL2 >= 0.3.0
+Requires:	php-pear-Net_URL2 >= 2.0.0
 Suggests:	php-curl
 Suggests:	php-fileinfo
 Suggests:	php-openssl
