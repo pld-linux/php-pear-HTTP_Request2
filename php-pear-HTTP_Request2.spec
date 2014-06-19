@@ -4,22 +4,22 @@
 Summary:	%{pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{pearname}
-Version:	2.1.1
+Version:	2.2.1
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	c068e245efcb5217da36a3d042839dd2
+# Source0-md5:	36c8406b0d95bbdec54ad0fdafa73d00
 URL:		http://pear.php.net/package/HTTP_Request2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-Net_URL2 >= 2.0.0
-Suggests:	php-curl
-Suggests:	php-fileinfo
-Suggests:	php-openssl
-Suggests:	php-zlib
+Suggests:	php(curl)
+Suggests:	php(fileinfo)
+Suggests:	php(openssl)
+Suggests:	php(zlib)
 Obsoletes:	php-pear-HTTP_Request2-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
