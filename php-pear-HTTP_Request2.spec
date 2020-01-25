@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	HTTP_Request2
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Provides an easy way to perform HTTP requests
 Summary(pl.UTF-8):	%{pearname} - dostarcza łatwą w użyciu metodę do wykonywania zapytań HTTP
 Name:		php-pear-%{pearname}
